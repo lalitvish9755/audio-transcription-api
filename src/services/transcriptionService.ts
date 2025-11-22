@@ -13,3 +13,11 @@ export async function createTranscription(audioUrl: string) {
   await record.save();
   return record;
 }
+
+export async function fetchAllTranscriptions() {
+  const thirtyDaysAgo = new Date();
+  thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+
+  const record = await Transcription.find({ createdAt: { $gte: thirtyDaysAgo } }).sort({createdAt:-1}); // newest first
+  return record;
+}

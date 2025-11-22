@@ -13,9 +13,11 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
+    "axios": "^1.13.2",
     "body-parser": "^2.2.0",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
+    "microsoft-cognitiveservices-speech-sdk": "^1.47.0",
     "mongoose": "^8.20.0"
   },
   "devDependencies": {
