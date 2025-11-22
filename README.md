@@ -11,18 +11,20 @@ This project follows scalable folder structure with clean separation of concerns
 
 ```
 src/
- ├── app.ts                  → Express initialization
- ├── server.ts               → MongoDB + server start
+ ├── app.ts
+ ├── server.ts
+ ├── controllers/
+ │     ├── transcriptionController.ts
+ │     └── azureTranscriptionController.ts
+ ├── services/
+ │     ├── transcriptionService.ts
+ │     └── transcriptionAzureService.ts
  ├── routes/
  │     └── transcriptionRoutes.ts
- ├── controllers/
- │     └── transcriptionController.ts
- ├── services/
- │     └── transcriptionService.ts
  ├── models/
  │     └── Transcription.ts
  ├── types/
-       └── transcription.d.ts (optional interfaces)
+ │     └── transcription.d.ts
 ```
 
 ---
